@@ -506,11 +506,21 @@ button {
   color: #ffffff;
 }
 
+.hero__first-btn:hover,
+.hero__first-btn:focus {
+  background-color: #c7133e;
+}
+
 .hero__second-btn {
   width: 83px;
   height: 24px;
   background-color: #ffffff;
   color: #d41443;
+}
+
+.hero__second-btn:hover,
+.hero__second-btn:focus {
+  background-color: #ecebeb;
 }
 
 .hero-list {

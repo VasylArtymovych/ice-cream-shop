@@ -1,0 +1,9 @@
+.dealers__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.dealers__item {
+  flex-basis: calc(100% / 3 - 20px);
+  margin-right: 20px;
+}

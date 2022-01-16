@@ -295,13 +295,13 @@ button {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 700px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1050px;
+    max-width: 1080px;
   }
 }
 
@@ -574,6 +574,7 @@ button {
   height: 24px;
   background-color: #d41443;
   color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 1200px) {
@@ -594,6 +595,7 @@ button {
   height: 24px;
   background-color: #ffffff;
   color: #d41443;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 1200px) {
@@ -751,6 +753,7 @@ button {
   height: 18px;
   border-radius: 50%;
   background-color: #ffffff;
+  color: #d41443;
 }
 
 @media screen and (min-width: 1200px) {
@@ -760,8 +763,10 @@ button {
   }
 }
 
-.hero-card__icon {
-  color: #d41443;
+.hero-card__link:hover,
+.hero-card__link:focus {
+  background-color: #ecebeb;
+  color: #c7133e;
 }
 
 .hero__img-voomen-thumb {

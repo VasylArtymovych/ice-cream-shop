@@ -851,20 +851,9 @@ button {
   }
 }
 
-@keyframes scale {
-  0% {
-  }
-  100% {
-  }
-}
-
-@keyframes rotateY {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(60deg);
-  }
+.hero-form {
+  display: block;
+  width: 400px;
 }
 
 .dealers__list {

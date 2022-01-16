@@ -312,19 +312,17 @@
   }
 }
 
-@keyframes scale {
-  0% {
-  }
-  100% {
-  }
+.hero__menu {
 }
-
-@keyframes rotateY {
-  0% {
-    transform: rotateY(0deg);
-  }
-
-  100% {
-    transform: rotateY(60deg);
-  }
+.hero-form {
+  display: block;
+  width: 400px;
+}
+.hero-form__title {
+}
+.hero-form__label {
+}
+.hero-form__input {
+}
+.hero-form__btn {
 }

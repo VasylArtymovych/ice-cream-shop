@@ -52,6 +52,7 @@
 }
 
 .hero__title span {
+  display: block;
   font-size: 48px;
   line-height: calc(46 / 48);
   text-transform: uppercase;
@@ -201,6 +202,9 @@
 
 .hero-card__thumb {
   width: 124px;
+  animation: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
   @media screen and(min-width: 1200px) {
     position: absolute;
     left: -34px;
@@ -236,6 +240,7 @@
   border-radius: 50%;
   background-color: #ffffff;
   color: #d41443;
+  transform: scale(1);
   @media screen and(min-width: 1200px) {
     width: 26px;
     height: 26px;
@@ -245,6 +250,7 @@
 .hero-card__link:focus {
   background-color: #ecebeb;
   color: #c7133e;
+  transform: scale(2);
 }
 
 .hero__img-voomen-thumb {
@@ -256,6 +262,9 @@
     z-index: 2;
     display: block;
     width: 168px;
+    animation: zoomIn;
+    animation-duration: 2s;
+    // animation-iteration-count: 1;
   }
   @media screen and(min-width: 1200px) {
     width: 293px;
@@ -292,6 +301,7 @@
   left: 50%;
   transform: translateX(-65%);
   width: 174px;
+  // animation: rotateY 1500ms infinite ease-in-out 1000ms;
   @media screen and(min-width: 768px) {
     left: 65%;
     width: 143px;
@@ -299,5 +309,22 @@
   @media screen and(min-width: 1200px) {
     left: 60%;
     width: 236px;
+  }
+}
+
+@keyframes scale {
+  0% {
+  }
+  100% {
+  }
+}
+
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(60deg);
   }
 }

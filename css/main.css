@@ -517,6 +517,7 @@ button {
 }
 
 .hero__title span {
+  display: block;
   font-size: 48px;
   line-height: calc(46 / 48);
   text-transform: uppercase;
@@ -710,6 +711,9 @@ button {
 
 .hero-card__thumb {
   width: 124px;
+  animation: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
 }
 
 @media screen and (min-width: 1200px) {
@@ -754,6 +758,7 @@ button {
   border-radius: 50%;
   background-color: #ffffff;
   color: #d41443;
+  transform: scale(1);
 }
 
 @media screen and (min-width: 1200px) {
@@ -767,6 +772,7 @@ button {
 .hero-card__link:focus {
   background-color: #ecebeb;
   color: #c7133e;
+  transform: scale(2);
 }
 
 .hero__img-voomen-thumb {
@@ -781,6 +787,8 @@ button {
     z-index: 2;
     display: block;
     width: 168px;
+    animation: zoomIn;
+    animation-duration: 2s;
   }
 }
 
@@ -840,6 +848,22 @@ button {
   .hero__icecream-thumb {
     left: 60%;
     width: 236px;
+  }
+}
+
+@keyframes scale {
+  0% {
+  }
+  100% {
+  }
+}
+
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(60deg);
   }
 }
 

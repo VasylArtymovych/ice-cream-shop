@@ -9,6 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
             rel="stylesheet">
+        <!-- favicon -->
+        <link rel="icon" href="./images/yo.svg#yo" type="image/x-icon">
+        <link rel="shortcut icon" href="./images/yo.svg#yo" type="image/x-icon">
         <!-- animations     -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <!-- fonts -->
@@ -139,18 +142,34 @@
                         <img src="./images/hero/hero-icecream-desktop2x.png" alt="icecream">
                     </picture>
                 </div>
+            </div>
+            <div class="menu-backdrop">
                 <div class="hero__menu">
+                    <button class="menu__close-btn btn" type="button">
+                        <svg width="20px" height="20px">
+                            <use href="./images/yo.svg#yo"></use>
+                        </svg>
+                    </button>
                     <form name="subscription" action="" class="hero-form">
                         <b class="hero-form__title">Subscription</b>
-                        <label for="" class="hero-form__label">
-                            <input type="email" name="email" class="hero-form__input">
-                        </label>
-                        <label for="" class="hero-form__label">
-                            <input type="tel" name="email" class="hero-form__input">
-                        </label>
-                        <button class="hero-form__btn" type="submit"><span></span>subscribe</button>
-                    </form>
+                        <div class="hero-form__group">
+                            <label for="user-emeil" class="hero-form__label">user email</label>
+                            <input id="user-emeil" type="email" name="email" class="hero-form__input">
+                        </div>
+            
+                        <div class="hero-form__group">
+                            <label for="user-tell" class="hero-form__label">user tell</label>
+                            <input id="user-tell" type="tel" name="tell" class="hero-form__input">
+                        </div>
+            
+                        <div class="hero-form__group"></div>
+                        <input type="checkbox" name="newsletter" class="hero-form__input">
+                        <label for="" class="hero-form__label">Get newsletter about our products</label>
                 </div>
+                <button type="submit">subscribe</button>
+            
+                </form>
+            </div>
             </div>
         </section>
 

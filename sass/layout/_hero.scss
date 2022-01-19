@@ -301,7 +301,6 @@
   left: 50%;
   transform: translateX(-65%);
   width: 174px;
-  // animation: rotateY 1500ms infinite ease-in-out 1000ms;
   @media screen and(min-width: 768px) {
     left: 65%;
     width: 143px;
@@ -313,16 +312,59 @@
 }
 
 .hero__menu {
-}
-.hero-form {
-  display: block;
   width: 400px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 16px #c7133e;
+  background-color: #ffb8ca;
 }
+.menu__close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.hero-form {
+  width: 100%;
+}
+
 .hero-form__title {
+  display: block;
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: calc(25 / 22);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #c7133e;
+}
+.hero-form__group {
+  position: relative;
+  margin-bottom: 20px;
 }
 .hero-form__label {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.04em;
+  color: #c7133e;
 }
 .hero-form__input {
+  width: 100%;
+  padding: 0px 5px 3px 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #c7133e;
+  outline: none;
 }
+
 .hero-form__btn {
 }

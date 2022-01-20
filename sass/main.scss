@@ -1,7 +1,9 @@
 @import "./base/reset";
 @import "./base/normalize";
+@import "./vars/vars";
 @import "./base/common";
 @import "./components/container";
+@import "./components/btn";
 @import "./layout/header";
 @import "./layout/hero";
 @import "./layout/dealers";

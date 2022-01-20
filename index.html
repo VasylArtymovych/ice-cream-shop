@@ -10,8 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
             rel="stylesheet">
         <!-- favicon -->
-        <link rel="icon" href="./images/yo.svg#yo" type="image/x-icon">
-        <link rel="shortcut icon" href="./images/yo.svg#yo" type="image/x-icon">
+        <link rel="icon" href="./images/yo.svg#yo" type="image/x-icon" sizes="16 16">
+        <link rel="shortcut icon" href="./images/yo.svg#yo" type="image/x-icon" sizes="16 16">
         <!-- animations     -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <!-- fonts -->
@@ -20,24 +20,25 @@
 
     </head>
     <body>
-        <!-- <header class="header">
+<!-- header -->
+        <header class="header">
             <div class="container">
                 <div class="header__body">
                     <a href="" class="header__logo">
-                        <img src="./images/logo-icecream.png" alt="">
+                        <img src="./images/header/logo-icecream2x-min.png" alt="icecream-logo" sizes="199px">
                     </a>
-                    <div class="header__burger" data-modal-open>
-                        <span></span>
+                    <div class="header__burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <span></span> 
                     </div>
-                    <nav class="header__menu is-hidden" data-modal>
-                        <button class="header__close-btn" type="button" data-modal-close>
+                    <nav class="header__menu js-menu-container" id="mobile-menu">
+                        <button class="header__close-btn js-close-menu" type="button">
                             <svg class="header__close-icon" width="14px" height="14px">
                                 <use href="./images/icons.svg#close"></use>
                             </svg>
                         </button>
                         <button class="header__menu-btn btn" type="button">Buy now
                             <svg class="header__menu-icon" width="6px" height="9px">
-                                <use href="./images/icons.svg#arrow"></use>
+                                <use href="./images/icons.svg#arrow-short"></use>
                             </svg>
                         </button>
                         <ul class="header__list">
@@ -60,13 +61,13 @@
                     </nav>
                     <button class="header__btn btn" type="button">Buy now
                         <svg class="header__btn-icon" width="6px" height="9px">
-                            <use href="./images/icons.svg#arrow"></use>
+                            <use href="./images/icons.svg#arrow-short"></use>
                         </svg>
                     </button>
                 </div>
             </div>
-        </header> -->
-
+        </header>
+<!-- hero -->
         <section class="hero">
             <div class="hero__container container">
                 <div class="hero__top-wrap">
@@ -143,7 +144,7 @@
                     </picture>
                 </div>
             </div>
-            <div class="menu-backdrop">
+            <!-- <div class="menu-backdrop">
                 <div class="hero__menu">
                     <button class="menu__close-btn btn" type="button">
                         <svg width="20px" height="20px">
@@ -162,14 +163,15 @@
                             <input id="user-tell" type="tel" name="tell" class="hero-form__input">
                         </div>
             
-                        <div class="hero-form__group"></div>
+                        <div class="hero-form__group">
                         <input type="checkbox" name="newsletter" class="hero-form__input">
                         <label for="" class="hero-form__label">Get newsletter about our products</label>
+                        </div>
                 </div>
                 <button type="submit">subscribe</button>
             
                 </form>
-            </div>
+            </div> -->
             </div>
         </section>
 
@@ -213,6 +215,11 @@
         
             </div>
         </section> -->
-        
+
+        <!-- mob-menu -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"></script>
+        <script defer src="./js/mob-menu.js"></script>
     </body>
 </html>

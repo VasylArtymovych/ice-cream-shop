@@ -274,7 +274,7 @@ summary {
 }
 
 body {
-  font-family: DMSans sans-serif;
+  font-family: DM Sans;
 }
 
 img {
@@ -316,6 +316,7 @@ button {
   line-height: calc(21 / 16);
   border: none;
   border-radius: 22px;
+  background-color: #ffffff;
   color: #d41443;
 }
 
@@ -325,6 +326,18 @@ button {
   z-index: 3;
   padding: 6px 0px;
   background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 35px 0px 15px 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 35px 0px 74px 0px;
+  }
 }
 
 .header__body {
@@ -344,11 +357,18 @@ button {
   position: relative;
   width: 20px;
   height: 12px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
   .header__burger {
     margin: 0px 30px 0px auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__burger {
+    display: none;
   }
 }
 
@@ -380,16 +400,19 @@ button {
   background-color: #d41443;
 }
 
-.header__menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  transform: translateX(100%);
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 250px;
-  padding: 25px 20px 185px 20px;
-  background-color: #e17992;
+@media screen and (max-width: 1199px) {
+  .header__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 250px;
+    height: 100vh;
+    padding: 25px 20px 185px 20px;
+    background-color: #e17992;
+  }
 }
 
 .header__menu.is-open {
@@ -397,9 +420,29 @@ button {
 }
 
 .header__close-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.header__close-btn:hover .header__close-icon,
+.header__close-btn:focus .header__close-icon {
+  fill: #d41443;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__close-btn {
+    display: none;
+  }
+}
+
+.header__close-icon {
+  fill: #ffffff;
   width: 16px;
   height: 16px;
 }
@@ -408,12 +451,39 @@ button {
   margin: 0px auto 32px auto;
 }
 
+.header__menu-btn:hover, .header__menu-btn:focus {
+  background-color: #ecebeb;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__menu-btn {
+    display: none;
+  }
+}
+
+.header__menu-icon {
+  fill: #d41443;
+  margin-left: 12px;
+}
+
 .header__list {
   list-style: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .header__list {
+    display: flex;
+  }
+}
+
 .header__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__item:not(:last-child) {
+    margin: 0px 20px 0px 0px;
+  }
 }
 
 .header__link {
@@ -424,6 +494,17 @@ button {
   color: #ffffff;
 }
 
+.header__link:hover, .header__link:focus {
+  color: #d41443;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__link {
+    font-size: 16px;
+    line-height: calc(21 / 16);
+  }
+}
+
 .header__btn {
   display: none;
 }
@@ -432,6 +513,14 @@ button {
   .header__btn {
     display: block;
   }
+  .header__btn:hover, .header__btn:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.header__btn-icon {
+  fill: #d41443;
+  margin-left: 12px;
 }
 
 .hero {
@@ -897,14 +986,85 @@ button {
   outline: none;
 }
 
+.dealers {
+  padding: 80px 0px 80px 0px;
+}
+
 .dealers__list {
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
 }
 
 .dealers__item {
-  flex-basis: calc(100% / 3 - 20px);
-  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dealers__thumb {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 30px;
+}
+
+.dealers__text-wrap {
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 40px 60px 25px 60px;
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  background-position: top 25px left 60px;
+  background-image: url(../images/dealers/quote-right.svg);
+}
+
+.dealers__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(31 / 12);
+  text-align: center;
+  background-image: repeating-linear-gradient(transparent 0px, transparent 30px, #e1e1e1 30px, #e1e1e1 31px);
+}
+
+.dealers__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  color: #000000;
+}
+
+.dealers__title::before {
+  content: "";
+  display: block;
+  margin: 0 auto 18px auto;
+  width: 32px;
+  height: 4px;
+  background-image: url(../images/dealers/circles.png);
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.dealers__list {
+  position: relative;
+}
+
+.dealers__list .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  font-size: 0;
+}
+
+.dealers__list .slick-arrow.slick-prev {
+  left: 0;
+}
+
+.dealers__list .slick-arrow.slick-next {
+  right: 0;
 }
 /*# sourceMappingURL=main.css.map */

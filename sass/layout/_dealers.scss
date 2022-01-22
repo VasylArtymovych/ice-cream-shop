@@ -1,9 +1,111 @@
-.dealers__list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+.dealers {
+  padding: 80px 0px 80px 0px;
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    // min-width: 0;
+  }
+  &__thumb {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 30px;
+  }
+  &__img {
+  }
+  &__text-wrap {
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 40px 60px 25px 60px;
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-position: top 25px left 60px;
+    background-image: url(../images/dealers/quote-right.svg);
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(31 / 12);
+    text-align: center;
+    background-image: repeating-linear-gradient(
+      transparent 0px,
+      transparent 30px,
+      #e1e1e1 30px,
+      #e1e1e1 31px
+    );
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(26 / 14);
+    color: #000000;
+  }
+  &__title::before {
+    content: "";
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 32px;
+    height: 4px;
+    background-image: url(../images/dealers/circles.png);
+  }
 }
+// slider
+.slick-slider {
+}
+// ogranichivaushaja-obolochka
+.slick-list {
+  overflow: hidden;
+}
+// lenta-slaidov
+.slick-track {
+  display: flex;
+}
+
+// slaid
+.slick-slide {
+}
+// slaid-activnuy
+.slick-slide.slick-active {
+}
+// slaid-osnovnoj
+.slick-slide.slick-current {
+}
+// slaid-po-centru
+.slick-slide.slick-center {
+}
+
+// arrow
+.slick-arrow {
+}
+.slick-arrow.slick-prev {
+}
+.slick-arrow.slick-next {
+}
+.slick-arrow.slick-disabled {
+}
+
+// dots
+// spisok-origin
+.dealers__list {
+  position: relative;
+  & .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    font-size: 0;
+  }
+  & .slick-arrow.slick-prev {
+    left: 0;
+  }
+  & .slick-arrow.slick-next {
+    right: 0;
+  }
+}
+
 .dealers__item {
-  flex-basis: calc(100% / 3 - 20px);
-  margin-right: 20px;
 }

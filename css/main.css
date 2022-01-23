@@ -1010,7 +1010,8 @@ button {
 .dealers__text-wrap {
   margin-bottom: 30px;
   width: 100%;
-  padding: 40px 60px 25px 60px;
+  padding: 40px 63px 25px 63px;
+  text-align: center;
   background-color: #fafafa;
   background-repeat: no-repeat;
   background-position: top 25px left 60px;
@@ -1021,8 +1022,16 @@ button {
   font-weight: 500;
   font-size: 12px;
   line-height: calc(31 / 12);
+  letter-spacing: 0.04em;
   text-align: center;
   background-image: repeating-linear-gradient(transparent 0px, transparent 30px, #e1e1e1 30px, #e1e1e1 31px);
+}
+
+@media screen and (min-width: 768px) {
+  .dealers__text {
+    font-size: 15px;
+    line-height: calc(31 / 15);
+  }
 }
 
 .dealers__title {
@@ -1030,6 +1039,13 @@ button {
   font-size: 14px;
   line-height: calc(26 / 14);
   color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .dealers__title {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+  }
 }
 
 .dealers__title::before {
@@ -1047,6 +1063,7 @@ button {
 
 .slick-track {
   display: flex;
+  align-items: flex-start;
 }
 
 .dealers__list {
@@ -1058,13 +1075,53 @@ button {
   top: 50%;
   z-index: 2;
   font-size: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
 }
 
 .dealers__list .slick-arrow.slick-prev {
   left: 0;
+  background: url(../images/dealers/angle-double-left.svg) no-repeat 0 0;
 }
 
 .dealers__list .slick-arrow.slick-next {
   right: 0;
+  background-color: transparent;
+  background-image: url(../images/dealers/angle-double-right.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.dealers__list .slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+.dealers__list .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dealers__list .slick-dots li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.dealers__list .slick-dots button {
+  padding: 0;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #d9d9d9;
+}
+
+.dealers__list .slick-dots li.slick-active button {
+  background: url(../images/dealers/home.svg) no-repeat 0 0;
+  border-radius: 0;
+  width: 12px;
+  color: currentColor;
 }
 /*# sourceMappingURL=main.css.map */
